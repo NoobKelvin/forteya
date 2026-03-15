@@ -77,11 +77,24 @@
             align-items: center; z-index: 100; backdrop-filter: blur(8px);
         }
         .modal-content {
-            background: navajowhite; padding: 2rem; border-radius: 20px; width: 85%; max-width: 340px;
-            text-align: center; transform: scale(0.7); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid #ffd700;
+            background: white; 
+    		padding: 2rem; 
+    		border-radius: 20px; 
+    		width: 85%; 
+    		max-width: 350px;
+    
+    		/* SCROLLABLE FIXES */
+    		max-height: 80vh;          /* Limit height to 80% of the screen */
+    		overflow-y: auto;          /* Enable vertical scrolling */
+    		position: relative;
+    
+    		text-align: center; 
+    		transform: scale(0.7); 
+    		transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    		border: 3px solid #ffd700;
 
-			-webkit-overflow-scrolling: touch;
+    		/* Smooth scrolling for mobile */
+    		-webkit-overflow-scrolling: touch;
         }
         .modal-overlay.active { display: flex; }
         .modal-overlay.active .modal-content { transform: scale(1); }
